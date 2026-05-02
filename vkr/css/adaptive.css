@@ -1,0 +1,864 @@
+/* ═══════════════════════════════════════════════════════════
+   adaptive.css — Адаптивные стили для всего проекта
+   Подключается ПОСЛЕДНИМ во всех HTML файлах:
+   <link rel="stylesheet" href="css/adaptive.css" />
+
+   БРЕЙКПОИНТЫ:
+   • > 1440px  — широкие мониторы
+   • 1024–1440 — планшет landscape / небольшой десктоп
+   • 768–1024  — планшет portrait
+   • < 768     — смартфоны
+   • < 380     — маленькие смартфоны
+═══════════════════════════════════════════════════════════ */
+
+
+/* ════════════════════════════════════════════════════════════
+   1. ШИРОКИЕ МОНИТОРЫ > 1440px
+   Контент центрируется, фон растягивается
+════════════════════════════════════════════════════════════ */
+@media (min-width: 1441px) {
+
+  /* Хедер */
+  .header__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Хедер: убираем жёсткий margin-left, переключаем на flex */
+  .header__nav {
+    margin-left: auto;
+  }
+
+  /* Hero */
+  .hero__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Контент не растягивается шире 1440px */
+  .about__inner,
+  .advantages__inner,
+  .steps .container,
+  .reviews .container,
+  .products__container,
+  .portfolio__container,
+  .contacts__container,
+  .footer__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Footer divider не выходит за пределы */
+  .footer__divider {
+    width: calc(100% - 128px);
+    left: 64px;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   2. ПЛАНШЕТ LANDSCAPE + НЕБОЛЬШОЙ ДЕСКТОП 1024–1440px
+   Хедер: убираем жёсткий margin-left у навигации
+════════════════════════════════════════════════════════════ */
+@media (max-width: 1440px) {
+
+  /* Хедер: navigation перестаёт быть жёстко отступлена на 411px */
+  .header__nav {
+    margin-left: auto;
+    gap: 24px;
+  }
+
+  /* Hero фото не выходит за экран */
+  .hero__photo {
+    width: 45%;
+    right: 32px;
+  }
+
+  .hero__heading {
+    width: auto;
+    max-width: 480px;
+  }
+
+  .hero__sub {
+    width: auto;
+    max-width: 420px;
+  }
+
+  /* Footer divider не выходит за пределы контейнера */
+  .footer__divider {
+    width: calc(100% - 128px);
+  }
+
+  /* Products страница: фильтры не перекрывают заголовок */
+  .products__filters {
+    left: auto;
+    right: 200px;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   3. ПЛАНШЕТ 768–1024px
+════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  :root {
+    --side-pad: 32px;
+  }
+
+  /* ── HEADER ── */
+  .header__nav {
+    margin-left: auto;
+    gap: 20px;
+  }
+
+  .header__nav-link {
+    font-size: 12px;
+  }
+
+  .header__cta {
+    margin-right: 32px;
+    width: 110px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    height: auto;
+    padding-bottom: 48px;
+    overflow: visible;
+  }
+
+  .hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .hero__photo {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 400px;
+    order: 1;
+  }
+
+  .hero__content {
+    order: 2;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+  }
+
+  .hero__heading {
+    font-size: 44px;
+    line-height: 56px;
+    width: 100%;
+  }
+
+  .hero__heading-accent {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .hero__sub {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .hero__card {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  /* ── ABOUT (index.html) ── */
+  .about__inner {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+
+  .about__content {
+    width: 100%;
+  }
+
+  .about__description p {
+    width: 100%;
+  }
+
+  .about__grid {
+    margin-left: 0;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+
+  /* ── PRODUCTS (index) ── */
+  .products {
+    height: auto;
+  }
+
+  .products__grid {
+    position: static;
+    margin-top: 0;
+    left: auto;
+    width: 100%;
+    padding: 0 32px;
+    margin-top: 180px;
+  }
+
+  .product-card {
+    width: calc(50% - 12px);
+  }
+
+  /* ── PRODUCTS PAGE ── */
+  .products__tag {
+    position: static;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding: 0 32px;
+  }
+
+  .products__title {
+    position: static;
+    padding: 0 32px;
+    width: auto;
+    margin-bottom: 16px;
+  }
+
+  .products__portfolio-link {
+    position: static;
+    display: inline-block;
+    margin: 0 32px 16px;
+  }
+
+  .products__filters {
+    position: static;
+    padding: 0 32px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 32px !important;
+  }
+
+  /* ── ADVANTAGES ── */
+  .advantages__title {
+    white-space: normal;
+    font-size: 36px;
+  }
+
+  .advantages__grid {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .advantages__divider {
+    display: none;
+  }
+
+  .advantage-card {
+    max-width: calc(50% - 20px);
+    flex: none;
+  }
+
+  /* ── STEPS ── */
+  .steps__grid {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .step-item {
+    width: calc(50% - 20px);
+  }
+
+  .steps__connecting-line {
+    display: none;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews__title {
+    font-size: 36px;
+  }
+
+  /* ── PORTFOLIO PAGE ── */
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-item {
+    height: 320px;
+  }
+
+  /* ── CONTACTS PAGE ── */
+  .contacts__container {
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 32px;
+  }
+
+  .contacts__column-left {
+    max-width: 100%;
+  }
+
+  .contacts__column-right {
+    width: 100%;
+  }
+
+  .info-block {
+    margin-top: 0;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    height: auto;
+    padding: 40px 0 24px;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0 32px;
+  }
+
+  .footer__brand {
+    width: 100%;
+  }
+
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__col {
+    width: auto !important;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .footer__divider {
+    position: static;
+    width: 100%;
+    margin: 24px 0 12px;
+    left: auto;
+    top: auto;
+  }
+
+  .footer__copy {
+    position: static;
+    padding-bottom: 16px;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   4. СМАРТФОНЫ < 768px
+════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  :root {
+    --side-pad: 20px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    height: 56px;
+    overflow: visible;
+  }
+
+  .header__inner {
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header__logo img {
+    width: 36px;
+    height: 40px;
+  }
+
+  /* Скрываем десктопную навигацию и кнопку */
+  .header__nav,
+  .header__cta {
+    display: none !important;
+  }
+
+  /* Бургер (создаётся в JS) */
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 1001;
+  }
+
+  .header__burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1E2B1D;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .header__burger.is-open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .header__burger.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__burger.is-open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* ── МОБИЛЬНОЕ МЕНЮ (нужно добавить в HTML — см. инструкцию) ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #F6F8F5;
+    border-top: 1px solid #E8EDE6;
+    z-index: 999;
+    flex-direction: column;
+  }
+
+  .mobile-menu.is-open {
+    display: flex;
+  }
+
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .mobile-menu__link {
+    padding: 16px 0;
+    border-bottom: 1px solid #E8EDE6;
+    font-size: 16px;
+    color: #2A3829;
+  }
+
+  .mobile-menu__cta {
+    display: block;
+    margin: 16px 20px;
+    background: #1E2B1D;
+    color: #F6F8F5;
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu__overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0,0,0,0.3);
+  }
+
+  .mobile-menu__overlay.is-active {
+    display: block;
+  }
+
+  /* ── ЗАГОЛОВКИ — общий сброс ── */
+  .hero__heading,
+  .about__title,
+  .products__title,
+  .advantages__title,
+  .steps__title,
+  .portfolio__title,
+  .reviews__title,
+  .contacts__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+    white-space: normal !important;
+    width: 100% !important;
+    letter-spacing: normal !important;
+  }
+
+  .hero__heading-accent {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    height: auto !important;
+    overflow: visible;
+  }
+
+  .hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__photo {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 260px !important;
+    order: 1;
+  }
+
+  .hero__card {
+    position: absolute !important;
+    left: 16px !important;
+    bottom: 16px !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 12px 16px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .hero__card-num {
+    padding: 0 !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+
+  .hero__card-label {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+  }
+
+  .hero__content {
+    order: 2;
+    padding: 32px 20px 0 !important;
+    width: 100% !important;
+  }
+
+  .hero__heading {
+    margin-top: 16px !important;
+    width: 100% !important;
+  }
+
+  .hero__sub {
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    margin-top: 16px !important;
+  }
+
+  .hero__actions {
+    margin-top: 28px !important;
+    flex-wrap: wrap;
+    gap: 16px !important;
+  }
+
+  /* ── ABOUT (index.html) ── */
+  .about__inner {
+    height: auto !important;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .about__content {
+    width: 100%;
+    padding-top: 32px;
+  }
+
+  .about__description p {
+    width: 100%;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .stat-card {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  /* ── ABOUT PAGE — отдельные стат-карточки ── */
+  .about__grid.about-page {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── PRODUCTS (index.html — 3 карточки) ── */
+  .products {
+    height: auto !important;
+  }
+
+  .products__grid {
+    position: static !important;
+    left: auto !important;
+    margin-top: 0 !important;
+    top: auto !important;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .product-card {
+    width: 100% !important;
+    height: 320px !important;
+  }
+
+  .products__tag {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 32px 20px 0;
+    display: flex !important;
+  }
+
+  .products__title {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 16px 20px 0;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+  }
+
+  .products__portfolio-link {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    display: inline-block;
+    margin: 16px 20px;
+  }
+
+  .products__filters {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 0 20px;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    margin-bottom: 24px !important;
+  }
+
+  .filter-btn {
+    font-size: 10px;
+    padding: 8px 14px;
+  }
+
+  /* ── ADVANTAGES ── */
+  .advantages__inner {
+    padding: 0 20px;
+  }
+
+  .advantages__title {
+    white-space: normal;
+  }
+
+  .advantages__grid {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .advantage-card {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .advantages__divider {
+    display: none;
+  }
+
+  /* ── STEPS ── */
+  .steps .container {
+    padding: 0 20px;
+  }
+
+  .steps__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  .steps__content {
+    margin-top: 40px;
+  }
+
+  .steps__connecting-line {
+    display: none;
+  }
+
+  .steps__grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .step-item {
+    width: 100%;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews .container {
+    padding: 0 20px;
+  }
+
+  .reviews__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .reviews__controls {
+    margin-left: 0;
+  }
+
+  /* ── PORTFOLIO PAGE ── */
+  .portfolio__container {
+    padding: 0 20px;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .portfolio-item {
+    height: 280px !important;
+  }
+
+  /* ── CONTACTS PAGE ── */
+  .contacts-section {
+    padding: 80px 0 48px;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .contacts__column-left {
+    max-width: 100%;
+  }
+
+  .contacts__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  .contacts__subtitle {
+    font-size: 14px;
+  }
+
+  .info-block {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    gap: 20px;
+  }
+
+  .map-container {
+    height: 240px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    height: auto !important;
+    padding: 40px 0 32px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .footer__brand {
+    width: 100% !important;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer__col {
+    width: 100% !important;
+  }
+
+  .footer__divider {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 16px 0;
+  }
+
+  .footer__copy {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   5. МАЛЕНЬКИЕ СМАРТФОНЫ < 380px
+════════════════════════════════════════════════════════════ */
+@media (max-width: 380px) {
+
+  .hero__actions {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .btn--primary {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .hero__heading,
+  .about__title,
+  .products__title,
+  .advantages__title,
+  .steps__title,
+  .portfolio__title,
+  .reviews__title,
+  .contacts__title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+
+  .stat-card {
+    height: 160px !important;
+  }
+
+  .stat-card__number {
+    font-size: 36px !important;
+  }
+
+  .portfolio-item {
+    height: 220px !important;
+  }
+
+  .review-card {
+    height: auto !important;
+    min-height: 300px;
+  }
+
+  .filter-btn {
+    font-size: 9px;
+    padding: 7px 10px;
+  }
+}

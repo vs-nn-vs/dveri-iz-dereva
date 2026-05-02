@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог продукции</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/adaptive.css" /> 
+</head>
+<body>  
+ 
+ <header class="header">
+   <div class="header__inner">
+     <a href="index.html" class="header__logo" aria-label="Главная">
+       <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60" />
+     </a>
+
+     <nav class="header__nav" aria-label="Основная навигация">
+       <a href="about.html"    class="header__nav-link">О нас</a>
+       <a href="products.html" class="header__nav-link">Продукция</a>
+       <a href="portfolio.html" class="header__nav-link">Портфолио</a>
+       <a href="contacts.html" class="header__nav-link">Контакты</a>
+     </nav>
+
+     <a href="contacts.html" class="header__cta" aria-label="Заказать">
+       <span class="header__cta-text">Заказать</span>
+     </a>
+   </div>
+ </header> 
+    
+ <section class="products" id="products">
+     <div class="products__container">
+         <div class="products__tag tag">
+             <span class="tag__line"></span>
+             <span class="tag__text">КАТАЛОГ</span>
+         </div>
+
+         <h2 class="products__title">Наше <span class="accent-italic">производство</span></h2>
+
+         <a href="portfolio.html" class="products__portfolio-link">СМОТРЕТЬ ПОРТФОЛИО</a>
+
+         <div class="products__filters" style="margin-bottom: 40px; display: flex; gap: 20px; justify-content: center;">
+             <button class="filter-btn active" data-filter="all">Все</button>
+             <button class="filter-btn" data-filter="entrance">Входные</button>
+             <button class="filter-btn" data-filter="interior">Межкомнатные</button>
+             <button class="filter-btn" data-filter="stairs">Лестницы</button>
+         </div>
+
+         <div class="products__grid">
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door1.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door2.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door3.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door4.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="entrance">
+                 <div class="product-card__visual">
+                     <img src="img/entrance-door5.jpg" alt="Входные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Входные двери</h3>
+                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door5.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door4.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door2.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door3.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door1.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="interior">
+                 <div class="product-card__visual">
+                     <img src="img/interior-door6.jpg" alt="Межкомнатные двери" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Межкомнатные двери</h3>
+                     <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="stairs">
+                 <div class="product-card__visual">
+                     <img src="img/staircase.jpg" alt="Лестницы" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Лестницы</h3>
+                     <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="stairs">
+                 <div class="product-card__visual">
+                     <img src="img/staircase1.jpg" alt="Лестницы" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Лестницы</h3>
+                     <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="stairs">
+                 <div class="product-card__visual">
+                     <img src="img/staircase2.jpg" alt="Лестницы" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Лестницы</h3>
+                     <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="stairs">
+                 <div class="product-card__visual">
+                     <img src="img/staircase3.jpg" alt="Лестницы" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Лестницы</h3>
+                     <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+                 </div>
+             </div>
+
+             <div class="product-card" data-category="stairs">
+                 <div class="product-card__visual">
+                     <img src="img/staircase4.jpg" alt="Лестницы" class="product-card__img">
+                 </div>
+                 <!--<div class="product-card__arrow">↗</div>-->
+                 <div class="product-card__info">
+                     <h3 class="product-card__name">Лестницы</h3>
+                     <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+
+ 
+ <footer class="footer">
+     <div class="container footer__container">
+         <div class="footer__brand">
+             <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60">
+             <p class="footer__description">
+                 Изготовление дверей и лестниц из<br>
+                 натурального массива.
+             </p>
+         </div>
+
+         <div class="footer__nav">
+             <div class="footer__col">
+                 <h5 class="footer__label">ПРОДУКЦИЯ</h5>
+                 <ul class="footer__list">
+                     <li>Входные двери</li>
+                     <li>Межкомнатные двери</li>
+                     <li>Лестницы</li>
+                 </ul>
+             </div>
+
+             <div class="footer__col">
+                 <h5 class="footer__label">КОМПАНИЯ</h5>
+                 <ul class="footer__list">
+                     <li><a href="about.html" class="footer__link">О нас</a></li>
+                     <li><a href="portfolio.html" class="footer__link">Портфолио</a></li>
+                     <li><a href="about.html#reviews" class="footer__link">Отзывы</a></li>
+                 </ul>
+             </div>
+
+             <div class="footer__col">
+                 <h5 class="footer__label">КОНТАКТЫ</h5>
+                 <ul class="footer__list">
+                     <li>+7 (999) 123-45-67</li>
+                     <li>info@dveri.ru</li>
+                     <li><a href="contacts.html" class="footer__link">Томск, ул. Ленина, 67</a></li>
+                 </ul>
+             </div>
+         </div>
+
+         <div class="footer__divider"></div>
+         <p class="footer__copy">© 2026 Двери из дерева. Все права защищены.</p>
+     </div>
+ </footer>
+ <!-- Мобильное меню (оверлей) -->
+ <div class="mobile-menu" id="mobileMenu">
+   <nav class="mobile-menu__nav">
+     <a href="about.html"     class="mobile-menu__link">О нас</a>
+     <a href="products.html"  class="mobile-menu__link">Продукция</a>
+     <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+     <a href="contacts.html"  class="mobile-menu__link">Контакты</a>
+   </nav>
+   <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
+ </div>
+ <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+ <script src="js/common.js"></script>
+ <script src="js/filter.js"></script>
+</body>
+</html>

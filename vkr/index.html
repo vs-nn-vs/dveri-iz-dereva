@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Двери из дерева на заказ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/adaptive.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       BLOCK 01 — HEADER / NAVIGATION
+       W: 1440px | H: 80px | BG: #F6F8F5
+       Bottom border: 1px solid #D4DDD2
+  ════════════════════════════════════════════ -->
+ <header class="header">
+   <div class="header__inner">
+     <a href="index.html" class="header__logo" aria-label="Главная">
+       <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60" />
+     </a>
+
+     <nav class="header__nav" aria-label="Основная навигация">
+       <a href="about.html"    class="header__nav-link">О нас</a>
+       <a href="products.html" class="header__nav-link">Продукция</a>
+       <a href="portfolio.html" class="header__nav-link">Портфолио</a>
+       <a href="contacts.html" class="header__nav-link">Контакты</a>
+     </nav>
+
+     <a href="contacts.html" class="header__cta" aria-label="Заказать">
+       <span class="header__cta-text">Заказать</span>
+     </a>
+   </div>
+ </header>
+
+  <!-- ═══════════════════════════════════════════
+       BLOCK 02 — HERO
+       W: 1440px | H: 900px | BG: #F6F8F5
+       Bottom border: 1px solid #D4DDD2
+  ════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+
+      <div class="hero__content">
+        <!-- Tag: left/top offset 64px | line 36×1px #8A9E88 + text 14px gap -->
+        <div class="tag">
+          <span class="tag__line"></span>
+          <span class="tag__text">Ручное производство</span>
+        </div>
+
+        <!-- H1: offset left 64px, top from tag 30px | block 520×480px
+             Raleway Light 62px, line-height 80px, color #1E2B1D
+             Fragment "его душа." — ExtraLight Italic 62px, color #6B7F6A -->
+        <h1 class="hero__heading">
+          Дверь&nbsp;— лицо дома.<br>
+          Лестница&nbsp;—
+          <em class="hero__heading-accent">его&nbsp;душа.</em><br>
+          Из дерева на заказ.
+        </h1>
+
+        <!-- Sub: left 64px, top from h1 30px | block 500×60px
+             Plus Jakarta Sans Light 15px, line-height 30px, color #8A9E88 -->
+        <p class="hero__sub">
+          Вы выбираете дерево и стиль — мы берём на себя все&nbsp;остальное
+          и гарантируем результат на 5 лет
+        </p>
+
+        <!-- Buttons row: left 64px -->
+        <div class="hero__actions">
+          <!-- Button: rect 140×35px #1E2B1D, padding 10/23px
+               Plus Jakarta Sans Regular 13px, spacing 0.16em, color #F6F8F5 -->
+          <a href="contacts.html" class="btn btn--primary">Заказать замер</a>
+
+          <!-- Link: left from btn 20px, top from sub 58px
+               Plus Jakarta Sans Regular 13px, spacing 0.16em, color #2A3829, underline #D4DDD2 -->
+          <a href="portfolio.html" class="hero__link">Посмотреть работы</a>
+        </div>
+      </div>
+
+      <!-- Photo: top/right offset 64px | rect 656×772px -->
+      <div class="hero__photo">
+        <img src="img/hero-bg.jpg" alt="Деревянная лестница и дверь из массива" class="hero__img">
+
+        <!-- Card overlay: left from photo 48px, bottom 58px | rect 160×90px #F6F8F5
+             Number "12" top 17px, left 30px — Raleway Light 38px, #1E2B1D
+             Text "лет на рынке" — Plus Jakarta Sans Light 11px, #8A9E88, left 30px -->
+        <div class="hero__card">
+          <span class="hero__card-num">12</span>
+          <span class="hero__card-label">лет на рынке</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="advantages">
+     <div class="advantages__inner">
+         <div class="tag">
+             <span class="tag__line"></span>
+             <span class="tag__text">Наши преимущества</span>
+         </div>
+        
+         <h2 class="advantages__title">Почему выбирают <span class="advantages__title-accent">нас</span></h2>
+
+         <div class="advantages__grid">
+            
+             <div class="advantage-card">
+                 <div class="advantage-card__icon">🌿</div>
+                 <h3 class="advantage-card__title">Натуральное дерево</h3>
+                 <p class="advantage-card__text">
+                     Работаем только с массивом.<br>
+                     Тщательно отбираем породы и<br>
+                     проверяем качество каждой доски перед работой.
+                 </p>
+             </div>
+
+             <div class="advantages__divider"></div>
+
+             <div class="advantage-card">
+                 <div class="advantage-card__icon">✦</div>
+                 <h3 class="advantage-card__title">Индивидуальный проект</h3>
+                 <p class="advantage-card__text">
+                     Разрабатываем дизайн под ваш интерьер.<br>
+                     Вы участвуете на каждом этапе —<br>
+                     от эскиза до монтажа.
+                 </p>
+             </div>
+
+             <div class="advantages__divider"></div>
+
+             <div class="advantage-card">
+                 <div class="advantage-card__icon">◇</div>
+                 <h3 class="advantage-card__title">Гарантия 5 лет</h3>
+                 <p class="advantage-card__text">
+                     Даём гарантию на все изделия.<br>
+                     Бесплатное обслуживание и<br>
+                     консультация в гарантийный период.
+                 </p>
+             </div>
+
+         </div>
+     </div>
+ </section> 
+
+ <section class="products" id="products">
+     <div class="products__container">
+       <div class="products__tag tag">
+         <span class="tag__line"></span>
+         <span class="tag__text">ПРОДУКЦИЯ</span>
+       </div>
+
+       <h2 class="products__title">Что мы <span class="accent-italic">создаем</span></h2>
+
+       <div class="products__grid">
+        
+         <div class="product-card">
+           <div class="product-card__visual">
+             <img src="img/entrance-door.jpg" alt="Входные двери" class="product-card__img">
+           </div>
+           <a href="products.html#doors-in" class="product-card__arrow">↗</a>
+           <div class="product-card__info">
+             <h3 class="product-card__name">Входные двери</h3>
+             <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+           </div>
+         </div>
+
+         <div class="product-card">
+           <div class="product-card__visual">
+             <img src="img/interior-door.jpg" alt="Межкомнатные двери" class="product-card__img">
+           </div>
+           <a href="products.html#doors-out" class="product-card__arrow">↗</a>
+           <div class="product-card__info">
+             <h3 class="product-card__name">Межкомнатные двери</h3>
+             <p class="product-card__sub">ЛИСТВЕННИЦА · ЕЛЬ</p>
+           </div>
+         </div>
+
+         <div class="product-card">
+           <div class="product-card__visual">
+             <img src="img/staircase.jpg" alt="Лестницы" class="product-card__img">
+           </div>
+           <a href="products.html#stairs" class="product-card__arrow">↗</a>
+           <div class="product-card__info">
+             <h3 class="product-card__name">Лестницы</h3>
+             <p class="product-card__sub">МАРШЕВЫЕ · ВИНТОВЫЕ</p>
+           </div>
+         </div>
+
+       </div>
+     </div>
+ </section> 
+
+
+ <section class="steps" id="steps">
+     <div class="container">
+         <div class="tag">
+             <span class="tag__line"></span>
+             <span class="tag__text">Процесс работы</span>
+         </div>
+
+         <h2 class="steps__title">Четыре шага до <span>готового изделия</span></h2>
+
+         <div class="steps__content">
+             <div class="steps__connecting-line"></div>
+
+             <div class="steps__grid">
+                 <div class="step-item">
+                     <div class="step-item__number">1</div>
+                     <h3 class="step-item__title">Замер и консультация</h3>
+                     <p class="step-item__text">Приезжаем, снимаем размеры и<br>обсуждаем ваши пожелания на<br>месте</p>
+                 </div>
+
+                 <div class="step-item">
+                     <div class="step-item__number">2</div>
+                     <h3 class="step-item__title">Эскиз и согласование</h3>
+                     <p class="step-item__text">Разрабатываем дизайн-проект и<br>согласовываем каждую деталь</p>
+                 </div>
+
+                 <div class="step-item">
+                     <div class="step-item__number">3</div>
+                     <h3 class="step-item__title">Изготовление</h3>
+                     <p class="step-item__text">Производим изделие<br>из выбранного<br>массива дерева<br>в мастерской</p>
+                 </div>
+
+                 <div class="step-item">
+                     <div class="step-item__number">4</div>
+                     <h3 class="step-item__title">Доставка и монтаж</h3>
+                     <p class="step-item__text">Привозим готовое изделие и<br>устанавливаем с гарантией качества</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <footer class="footer">
+     <div class="container footer__container">
+         <div class="footer__brand">
+             <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60">
+             <p class="footer__description">
+                 Изготовление дверей и лестниц из<br>
+                 натурального массива.
+             </p>
+         </div>
+
+         <div class="footer__nav">
+             <div class="footer__col">
+                 <h5 class="footer__label">ПРОДУКЦИЯ</h5>
+                 <ul class="footer__list">
+                     <li>Входные двери</li>
+                     <li>Межкомнатные двери</li>
+                     <li>Лестницы</li>
+                 </ul>
+             </div>
+
+             <div class="footer__col">
+                 <h5 class="footer__label">КОМПАНИЯ</h5>
+                 <ul class="footer__list">
+                     <li><a href="about.html" class="footer__link">О нас</a></li>
+                     <li><a href="portfolio.html" class="footer__link">Портфолио</a></li>
+                     <li><a href="about.html#reviews" class="footer__link">Отзывы</a></li>
+                 </ul>
+             </div>
+
+             <div class="footer__col">
+                 <h5 class="footer__label">КОНТАКТЫ</h5>
+                 <ul class="footer__list">
+                     <li>+7 (999) 123-45-67</li>
+                     <li>info@dveri.ru</li>
+                     <li><a href="contacts.html" class="footer__link">Томск, ул. Ленина, 67</a></li>
+                 </ul>
+             </div>
+         </div>
+
+         <div class="footer__divider"></div>
+         <p class="footer__copy">© 2026 Двери из дерева. Все права защищены.</p>
+     </div>
+ </footer>
+ 
+ 
+  <!-- Мобильное меню (оверлей) -->
+ <div class="mobile-menu" id="mobileMenu">
+   <nav class="mobile-menu__nav">
+     <a href="about.html"     class="mobile-menu__link">О нас</a>
+     <a href="products.html"  class="mobile-menu__link">Продукция</a>
+     <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+     <a href="contacts.html"  class="mobile-menu__link">Контакты</a>
+   </nav>
+   <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
+ </div>
+ <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+ <script src="https://unpkg.com/imask"></script>
+
+ <script>
+   // Находим поле телефона по имени или классу
+   const phoneInput = document.querySelector('input[name="user_phone"]');
+  
+   // Настраиваем маску
+   const phoneMask = IMask(phoneInput, {
+     mask: '+{7} (000) 000-00-00'
+   });
+ </script>
+
+ <script type="text/javascript">
+    (function(){
+       // Сюда вставьте Public Key из раздела Account -> API Keys
+       emailjs.init("gVG3uJSKnmmEg95ex"); 
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+       event.preventDefault();
+
+       const btn = document.getElementById('submit-btn');
+       const originalText = btn.innerText;
+      
+       // Визуальный отклик для пользователя
+       btn.innerText = 'ОТПРАВКА...';
+       btn.disabled = true;
+
+       // Отправка (Service ID, Template ID, эта форма)
+       emailjs.sendForm('service_6h5azal', 'template_fzqtn7s', this)
+         .then(function() {
+             alert('Спасибо! Заявка успешно отправлена.');
+             document.getElementById('contact-form').reset();
+             btn.innerText = originalText;
+             btn.disabled = false;
+         }, function(error) {
+             alert('Ошибка при отправке: ' + JSON.stringify(error));
+             btn.innerText = originalText;
+             btn.disabled = false;
+         });
+    });
+ </script>
+
+</body>
+</html>
