@@ -1,10 +1,16 @@
+/* ── Инициализация EmailJS (перенесено из email-sender.js) ── */
+(function() {
+    // Ваш Public Key для связи с сервисом EmailJS
+    emailjs.init("gVG3uJSKnmmEg95ex");[cite: 6]
+})();
+
 /* ═══════════════════════════════════════════════
-   main.js — Header interactivity, Forms & Slider
+   common.js — Логика меню, слайдера и форм
 ════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Burger menu (mobile) ──────────────────── */
+  /* ── Burger menu (мобильная навигация) ───────── */
   const header = document.querySelector('.header__inner');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileOverlay = document.getElementById('mobileOverlay');
@@ -51,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── Header shadow on scroll ───────────────── */
+  /* ── Тень шапки при скролле ─────────────────── */
   const headerEl = document.querySelector('.header');
 
   const handleScroll = () => {
@@ -67,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
 
 
-  /* ── Smooth anchor scroll ──────────────────── */
+  /* ── Плавный скролл по якорям ───────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -79,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Swiper Slider (Reviews) ───────────────── */
-  // Добавлена проверка на существование слайдера на странице
+
+  /* ── Swiper Slider (Отзывы) ─────────────────── */
   if (document.querySelector('.reviews-slider')) {
     const swiper = new Swiper('.reviews-slider', {
       slidesPerView: 3,
@@ -88,10 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: true,
       grabCursor: true,
       speed: 800,
-      watchOverflow: false,
       navigation: {
-        nextEl: document.querySelector('.reviews__btn--next'), /* ← DOM-элемент */
-        prevEl: document.querySelector('.reviews__btn--prev'), /* ← DOM-элемент */
+        nextEl: '.reviews__btn--next',
+        prevEl: '.reviews__btn--prev',
         disabledClass: 'reviews__btn--disabled',
       },
       breakpoints: {
@@ -101,45 +106,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
- console.log('prev:', document.querySelector('.reviews__btn--prev'));
- console.log('next:', document.querySelector('.reviews__btn--next'));
- console.log('swiper navigation:', swiper.navigation);
+
  
-  /* ── Form Validation & EmailJS ──────────────── */
-  const phoneInput = document.querySelector('input[name="user_phone"]');
+  /* ── Валидация формы и отправка через EmailJS ── */
+  const phoneInput = document.querySelector('input[name="user_phone"]');[cite: 5]
   let phoneMask;
   
+  // Применяем маску к полю телефона, если библиотека IMask подключена
   if (phoneInput && typeof IMask !== 'undefined') {
       phoneMask = IMask(phoneInput, {
           mask: '+{7} (000) 000-00-00'
-      });
+      });[cite: 5]
   }
 
-  const contactForm = document.getElementById('contact-form');
+  const contactForm = document.getElementById('contact-form');[cite: 5]
   
   if (contactForm) {
       contactForm.addEventListener('submit', function(event) {
           event.preventDefault();
-          const btn = document.getElementById('submit-btn');
+          const btn = document.getElementById('submit-btn');[cite: 5]
           
-          if (phoneMask && !phoneMask.masked.isComplete) {
+          // Проверка на корректность заполнения маски
+          if (phoneMask && !phoneMask.masked.isComplete) {[cite: 5]
               alert('Пожалуйста, введите номер телефона полностью.');
               phoneInput.focus();
               return;
           }
 
-          btn.innerText = 'ОТПРАВКА...';
-          btn.disabled = true;
+          // Визуальное состояние кнопки при отправке
+          btn.innerText = 'ОТПРАВКА...';[cite: 5]
+          btn.disabled = true;[cite: 5]
 
-          emailjs.sendForm('service_6h5azal', 'template_fzqtn7s', this)
+          // Отправка данных формы через ваши Service ID и Template ID
+          emailjs.sendForm('service_6h5azal', 'template_fzqtn7s', this)[cite: 5, 6]
             .then(() => {
-                alert('Спасибо! Заявка успешно отправлена.');
-                contactForm.reset();
-                if (phoneMask) phoneMask.updateValue();
+                alert('Спасибо! Заявка успешно отправлена.');[cite: 5]
+                contactForm.reset(); // Очистка всех полей
+                if (phoneMask) phoneMask.updateValue(); // Сброс маски
                 btn.innerText = 'ОТПРАВИТЬ ЗАЯВКУ';
                 btn.disabled = false;
             }, (error) => {
-                alert('Ошибка при отправке: ' + JSON.stringify(error));
+                alert('Ошибка при отправке: ' + JSON.stringify(error));[cite: 5]
                 btn.innerText = 'ОТПРАВИТЬ ЗАЯВКУ';
                 btn.disabled = false;
             });
