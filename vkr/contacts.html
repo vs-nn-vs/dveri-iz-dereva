@@ -10,136 +10,166 @@
   <link rel="stylesheet" href="css/contacts.css" />
   <link rel="stylesheet" href="css/adaptive.css" />
 </head>
-<body> 
+<body>
  
- <header class="header">
-   <div class="header__inner">
-     <a href="index.html" class="header__logo" aria-label="Главная">
-       <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60" />
-     </a>
-
-     <nav class="header__nav" aria-label="Основная навигация">
-       <a href="about.html"    class="header__nav-link">О нас</a>
-       <a href="products.html" class="header__nav-link">Продукция</a>
-       <a href="portfolio.html" class="header__nav-link">Портфолио</a>
-       <a href="contacts.html" class="header__nav-link">Контакты</a>
-     </nav>
-
-     <a href="contacts.html" class="header__cta" aria-label="Заказать">
-       <span class="header__cta-text">Заказать</span>
-     </a>
-   </div>
- </header>
-
- <section class="contacts-section">
-     <div class="container contacts__container">
-        
-         <div class="contacts__column-left">
-             <div class="tag">
-                 <span class="tag__line"></span>
-                 <span class="tag__text">Контакты</span>
-             </div>
-             <h2 class="contacts__title">Обсудить ваш <span class="accent-italic">проект</span></h2>
-             <p class="contacts__subtitle">Оставьте заявку, и мы свяжемся с вами для уточнения деталей и расчета стоимости.</p>
-            
-             <form class="cta__form" id="contact-form">
-                 <div class="form-group">
-                     <label class="form-label">ВАШЕ ИМЯ</label>
-                     <input type="text" name="user_name" class="form-input" placeholder="Иван Иванов" required>
-                 </div>
-                 <div class="form-group">
-                     <label class="form-label">ТЕЛЕФОН</label>
-                     <input type="tel" name="user_phone" id="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
-                 </div>
-                 <div class="form-group">
-                     <label class="form-label">СООБЩЕНИЕ</label>
-                     <textarea name="message" class="form-textarea" placeholder="Например: нужна лестница из ясеня..."></textarea>
-                 </div>
-                 <button type="submit" id="submit-btn" class="cta__button">ОТПРАВИТЬ ЗАЯВКУ</button>
-             </form>
-         </div>
-
-         <div class="contacts__column-right">
-             <div class="info-block">
-                 <div class="info-item">
-                     <span class="info-label">АДРЕС</span>
-                     <p class="info-text">г. Томск, ул. Ленина, 67</p>
-                 </div>
-                 <div class="info-item">
-                     <span class="info-label">ТЕЛЕФОН</span>
-                     <p class="info-text">+7 (999) 123-45-67</p>
-                 </div>
-                 <div class="info-item">
-                     <span class="info-label">РЕЖИМ РАБОТЫ</span>
-                     <p class="info-text">Пн — Пт: 09:00 – 19:00</p>
-                 </div>
-             </div>
-
-             <div id="map" class="map-container"></div>
-         </div>
-
-     </div>
- </section>
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Главная">
+        <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60" />
+      </a>
  
- <footer class="footer">
-     <div class="container footer__container">
-         <div class="footer__brand">
-             <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60">
-             <p class="footer__description">
-                 Изготовление дверей и лестниц из<br>
-                 натурального массива.
-             </p>
-         </div>
-
-         <div class="footer__nav">
-             <div class="footer__col">
-                 <h5 class="footer__label">ПРОДУКЦИЯ</h5>
-                 <ul class="footer__list">
-                     <li>Входные двери</li>
-                     <li>Межкомнатные двери</li>
-                     <li>Лестницы</li>
-                 </ul>
-             </div>
-
-             <div class="footer__col">
-                 <h5 class="footer__label">КОМПАНИЯ</h5>
-                 <ul class="footer__list">
-                     <li><a href="about.html" class="footer__link">О нас</a></li>
-                     <li><a href="portfolio.html" class="footer__link">Портфолио</a></li>
-                     <li><a href="about.html#reviews" class="footer__link">Отзывы</a></li>
-                 </ul>
-             </div>
-
-             <div class="footer__col">
-                 <h5 class="footer__label">КОНТАКТЫ</h5>
-                 <ul class="footer__list">
-                     <li>+7 (999) 123-45-67</li>
-                     <li>info@dveri.ru</li>
-                     <li><a href="contacts.html" class="footer__link">Томск, ул. Ленина, 67</a></li>
-                 </ul>
-             </div>
-         </div>
-
-         <div class="footer__divider"></div>
-         <p class="footer__copy">© 2026 Двери из дерева. Все права защищены.</p>
-     </div>
- </footer>
- <!-- Мобильное меню (оверлей) -->
- <div class="mobile-menu" id="mobileMenu">
-   <nav class="mobile-menu__nav">
-     <a href="about.html"     class="mobile-menu__link">О нас</a>
-     <a href="products.html"  class="mobile-menu__link">Продукция</a>
-     <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
-     <a href="contacts.html"  class="mobile-menu__link">Контакты</a>
-   </nav>
-   <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
- </div>
- <div class="mobile-menu__overlay" id="mobileOverlay"></div>
- <script src="https://cdn.jsdelivr.net/npm/imask@7.1.3/dist/imask.min.js"></script>
- <script src="js/common.js"></script>
- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
- <script src="js/map-init.js"></script>   
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="about.html"    class="header__nav-link">О нас</a>
+        <a href="products.html" class="header__nav-link">Продукция</a>
+        <a href="portfolio.html" class="header__nav-link">Портфолио</a>
+        <a href="contacts.html" class="header__nav-link">Контакты</a>
+      </nav>
+ 
+      <a href="contacts.html" class="header__cta" aria-label="Заказать">
+        <span class="header__cta-text">Заказать</span>
+      </a>
+    </div>
+  </header>
+ 
+  <section class="contacts-section">
+    <div class="container contacts__container">
+ 
+      <div class="contacts__column-left">
+        <div class="tag">
+          <span class="tag__line"></span>
+          <span class="tag__text">Контакты</span>
+        </div>
+        <h2 class="contacts__title">Обсудить ваш <span class="accent-italic">проект</span></h2>
+        <p class="contacts__subtitle">Оставьте заявку, и мы свяжемся с вами для уточнения деталей и расчета стоимости.</p>
+ 
+        <form class="cta__form" id="contact-form">
+ 
+          <div class="form-group">
+            <!-- FIX: добавлен for="user-name" для связи label с полем -->
+            <label class="form-label" for="user-name">ВАШЕ ИМЯ</label>
+            <input
+              type="text"
+              id="user-name"
+              name="user_name"
+              class="form-input"
+              placeholder="Иван Иванов"
+              required
+            >
+          </div>
+ 
+          <div class="form-group">
+            <!-- FIX: добавлен for="phone" для связи label с полем -->
+            <label class="form-label" for="phone">ТЕЛЕФОН</label>
+            <input
+              type="tel"
+              id="phone"
+              name="user_phone"
+              class="form-input"
+              placeholder="+7 (___) ___-__-__"
+              required
+            >
+          </div>
+ 
+          <div class="form-group">
+            <!-- FIX: добавлен for="message" для связи label с textarea -->
+            <label class="form-label" for="message">СООБЩЕНИЕ</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-textarea"
+              placeholder="Например: нужна лестница из ясеня..."
+            ></textarea>
+          </div>
+ 
+          <!-- FIX: id="submit-btn" был — оставляем, он нужен для common.js -->
+          <button type="submit" id="submit-btn" class="cta__button">ОТПРАВИТЬ ЗАЯВКУ</button>
+ 
+        </form>
+      </div>
+ 
+      <div class="contacts__column-right">
+        <div class="info-block">
+          <div class="info-item">
+            <span class="info-label">АДРЕС</span>
+            <p class="info-text">г. Томск, ул. Ленина, 67</p>
+          </div>
+          <div class="info-item">
+            <span class="info-label">ТЕЛЕФОН</span>
+            <p class="info-text">+7 (999) 123-45-67</p>
+          </div>
+          <div class="info-item">
+            <span class="info-label">РЕЖИМ РАБОТЫ</span>
+            <p class="info-text">Пн — Пт: 09:00 – 19:00</p>
+          </div>
+        </div>
+ 
+        <div id="map" class="map-container"></div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <img src="assets/logo.svg" alt="Двери из дерева" width="53" height="60">
+        <p class="footer__description">
+          Изготовление дверей и лестниц из<br>
+          натурального массива.
+        </p>
+      </div>
+ 
+      <div class="footer__nav">
+        <div class="footer__col">
+          <h5 class="footer__label">ПРОДУКЦИЯ</h5>
+          <ul class="footer__list">
+            <li>Входные двери</li>
+            <li>Межкомнатные двери</li>
+            <li>Лестницы</li>
+          </ul>
+        </div>
+ 
+        <div class="footer__col">
+          <h5 class="footer__label">КОМПАНИЯ</h5>
+          <ul class="footer__list">
+            <li><a href="about.html"    class="footer__link">О нас</a></li>
+            <li><a href="portfolio.html" class="footer__link">Портфолио</a></li>
+            <li><a href="about.html#reviews" class="footer__link">Отзывы</a></li>
+          </ul>
+        </div>
+ 
+        <div class="footer__col">
+          <h5 class="footer__label">КОНТАКТЫ</h5>
+          <ul class="footer__list">
+            <li>+7 (999) 123-45-67</li>
+            <li>info@dveri.ru</li>
+            <li><a href="contacts.html" class="footer__link">Томск, ул. Ленина, 67</a></li>
+          </ul>
+        </div>
+      </div>
+ 
+      <div class="footer__divider"></div>
+      <p class="footer__copy">© 2026 Двери из дерева. Все права защищены.</p>
+    </div>
+  </footer>
+ 
+  <!-- Мобильное меню (оверлей) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__nav">
+      <a href="about.html"     class="mobile-menu__link">О нас</a>
+      <a href="products.html"  class="mobile-menu__link">Продукция</a>
+      <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+      <a href="contacts.html"  class="mobile-menu__link">Контакты</a>
+    </nav>
+    <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
+  </div>
+  <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imask@7.1.3/dist/imask.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/map-init.js"></script>
+ 
 </body>
 </html>
