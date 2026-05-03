@@ -125,7 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.addEventListener('submit', function(event) {
           event.preventDefault();
           const btn = document.getElementById('submit-btn');[cite: 5]
-          
+
+          const nameInput = document.querySelector('input[name="user_name"]');
+          if (nameInput && nameInput.value.trim().length < 2) {
+            alert('Пожалуйста, введите ваше имя.');
+            nameInput.focus();
+            return;
+          }
           // Проверка на корректность заполнения маски
           if (phoneMask && !phoneMask.masked.isComplete) {[cite: 5]
               alert('Пожалуйста, введите номер телефона полностью.');
