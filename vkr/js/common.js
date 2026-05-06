@@ -1,14 +1,15 @@
-/* ── Инициализация EmailJS ── */
-(function() {
-  emailjs.init("gVG3uJSKnmmEg95ex");
-})();
- 
-/* ═══════════════════════════════════════════════
+ /* ═══════════════════════════════════════════════
    common.js — Логика меню, слайдера и форм
 ════════════════════════════════════════════════ */
  
 document.addEventListener('DOMContentLoaded', () => {
  
+  /* ── Инициализация EmailJS ── */
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("gVG3uJSKnmmEg95ex"); // Ваш Public Key
+  } else {
+    console.error("Ошибка: Библиотека EmailJS не загружена. Проверьте подключение в HTML.");
+  }
   /* ── Burger menu (мобильная навигация) ───────── */
   const header = document.querySelector('.header__inner');
   const mobileMenu = document.getElementById('mobileMenu');
