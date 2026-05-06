@@ -504,3 +504,121 @@ ul  { list-style: none; }
     font-size: 12px;
     color: rgba(255, 255, 255, 0.2); /* Насыщенность 20% */
 }
+/* Мобильное меню — скрыто по умолчанию */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #F6F8F5;
+    border-top: 1px solid #E8EDE6;
+    z-index: 999;
+    flex-direction: column;
+}
+
+.mobile-menu.is-open {
+    display: flex;
+}
+
+.mobile-menu__overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0,0,0,0.3);
+}
+
+.mobile-menu__overlay.is-active {
+    display: block;
+}
+
+.mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.mobile-menu__link {
+    padding: 16px 0;
+    border-bottom: 1px solid #E8EDE6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #2A3829;
+    text-decoration: none;
+}
+
+.mobile-menu__cta {
+    display: block;
+    margin: 16px 20px;
+    background: #1E2B1D;
+    color: #F6F8F5;
+    text-align: center;
+    padding: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Бургер-кнопка — скрыта на десктопе */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.header__burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1E2B1D;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.header__burger.is-open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__burger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger.is-open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 56px;
+    }
+
+    .header__inner {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .header__logo img {
+        width: 36px;
+        height: 40px;
+    }
+
+    /* Скрываем десктопную навигацию и кнопку */
+    .header__nav,
+    .header__cta {
+        display: none !important;
+    }
+
+    /* Показываем бургер */
+    .header__burger {
+        display: flex;
+    }
+}
