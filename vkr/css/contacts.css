@@ -367,9 +367,10 @@ ul  { list-style: none; }
 .info-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 30px 40px;
     margin-bottom: 40px;
     margin-top: 80px; /* Чтобы выровнять с началом формы */
+    align-items: start;
 }
 
 .info-item .info-label {
@@ -383,6 +384,26 @@ ul  { list-style: none; }
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     color: #F6F8F5;
+}
+
+/* Ссылки в блоке контактной информации */
+.info-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #F6F8F5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-link:hover {
+    color: #6B7F6A;
+}
+
+@media (max-width: 768px) {
+    .info-link {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
 }
 
 /* Контейнер для карты */
