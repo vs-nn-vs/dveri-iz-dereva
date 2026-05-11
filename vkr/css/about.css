@@ -629,24 +629,7 @@ ul  { list-style: none; }
     font-size: 12px;
     color: rgba(255, 255, 255, 0.2); /* Насыщенность 20% */
 }
-/* Телефон в футере — кликабелен на мобильных */
-.footer__tel {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
 
-.footer__tel:hover {
-  color: #FFFFFF;
-}
-
-/* На мобильных подчёркиваем чтобы было понятно что это ссылка */
-@media (max-width: 768px) {
-  .footer__tel {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-}
 /* Мобильное меню — скрыто по умолчанию */
 .mobile-menu {
     display: none;
