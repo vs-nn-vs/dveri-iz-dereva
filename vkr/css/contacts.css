@@ -401,7 +401,6 @@ ul  { list-style: none; }
 
 @media (max-width: 768px) {
     .info-link {
-        text-decoration: underline;
         text-underline-offset: 3px;
     }
 }
