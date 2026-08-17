@@ -1,0 +1,210 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white:   #F6F8F5;
+  --color-beige:   #E8EDE6;
+  --color-mid:     #D4DDD2;
+  --color-dark:    #1E2B1D;
+  --color-accent:  #6B7F6A;
+  --color-text:    #2A3829;
+  --color-muted:   #8A9E88;
+
+  --font-display: 'Raleway', serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
+
+  --max-width: 1440px;
+  --side-pad:  64px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+/* ── TAG (переиспользуем паттерн с других страниц) ── */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tag__line {
+  display: block;
+  width: 36px;
+  height: 1px;
+  background-color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+.tag__text {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.accent-italic {
+  font-weight: 200;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* ── Секция политики ── */
+.legal {
+  padding: 120px var(--side-pad) 100px;
+  background: var(--color-white);
+}
+
+.legal__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.legal__header {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.legal__title {
+  margin: 20px 0 12px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.legal__updated {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* ── Двухколоночная сетка: оглавление + текст ── */
+.legal__body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.legal__toc {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 24px;
+  border-right: 1px solid var(--color-mid);
+}
+
+.legal__toc-label {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.legal__toc-link {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal__toc-link:hover {
+  color: var(--color-accent);
+}
+
+/* ── Текстовый контент ── */
+.legal__content {
+  max-width: 720px;
+}
+
+.legal__section {
+  margin-bottom: 48px;
+  scroll-margin-top: 100px; /* чтобы заголовок не прятался под шапкой при переходе по якорю */
+}
+
+.legal__section h2 {
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--color-dark);
+}
+
+.legal__section p {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.legal__list {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.legal__list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.legal__list--plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+.legal__link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal__link:hover {
+  color: var(--color-dark);
+}
+
+/* ── Адаптив ── */
+@media (max-width: 900px) {
+  .legal {
+    padding: 80px 24px 60px;
+  }
+
+  .legal__title {
+    font-size: 32px;
+  }
+
+  .legal__body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .legal__toc {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-right: 0;
+    padding-bottom: 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-mid);
+  }
+
+  .legal__toc-label {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
