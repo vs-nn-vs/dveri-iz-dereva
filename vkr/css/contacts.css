@@ -703,11 +703,13 @@ ul  { list-style: none; }
 }
 
 .form-checkbox__link {
-  color: var(--color-white);
+  color: var(--color-beige);
   text-decoration: underline;
+  text-decoration-color: var(--color-mid);
   text-underline-offset: 2px;
 }
 
 .form-checkbox__link:hover {
-  color: var(--color-beige);
+  color: var(--color-white);
+  text-decoration-color: var(--color-white);
 }
