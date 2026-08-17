@@ -123,7 +123,7 @@
 }
 
 .product-modal__desc {
-  margin: 32px 0 32px;
+  margin: 20px 0 32px;
   font-family: var(--font-body);
   font-weight: 300;
   font-size: 15px;
