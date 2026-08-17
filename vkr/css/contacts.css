@@ -636,6 +636,12 @@ ul  { list-style: none; }
     .header__cta {
         display: none !important;
     }
+
+    /* Показываем бургер */
+    .header__burger {
+        display: flex;
+    }
+}
 /* ── Чекбокс согласия на обработку данных ── */
 .form-group--checkbox {
   margin: 8px 0 24px;
@@ -704,9 +710,4 @@ ul  { list-style: none; }
 
 .form-checkbox__link:hover {
   color: var(--color-dark);
-}
-    /* Показываем бургер */
-    .header__burger {
-        display: flex;
-    }
 }
