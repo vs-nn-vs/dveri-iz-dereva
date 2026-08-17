@@ -51,15 +51,21 @@
          </div>
 
          <div class="products__grid">
-             <div class="product-card" data-category="entrance">
-                 <div class="product-card__visual">
-                     <img src="img/entrance-door.jpg" alt="Входные двери" class="product-card__img">
-                 </div>
+             <div class="product-card" 
+               data-category="entrance"
+               data-full-title="Входные двери «Классика»"
+               data-material="Массив дуба / ясеня"
+               data-size="2050×960 мм (возможен индивидуальный размер)"
+               data-price="от 145 000 ₽"
+               data-description="Массивная входная дверь с элементами резьбы, витражными вставками и коваными накладками. Утепление, класс защиты «взломостойкая», система из 3 контуров уплотнения.">
+              <div class="product-card__visual">
+                  <img src="img/entrance-door.jpg" alt="Входные двери" class="product-card__img">
+              </div>
                  <!--<div class="product-card__arrow">↗</div>-->
-                 <div class="product-card__info">
-                     <h3 class="product-card__name">Входные двери</h3>
-                     <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
-                 </div>
+              <div class="product-card__info">
+                  <h3 class="product-card__name">Входные двери</h3>
+                  <p class="product-card__sub">ДУБ · ЯСЕНЬ</p>
+              </div>
              </div>
 
              <div class="product-card" data-category="entrance">
@@ -318,5 +324,20 @@
  <div class="mobile-menu__overlay" id="mobileOverlay"></div>
  <script src="js/filter.js"></script>
  <script src="js/common.js"></script>
+<div class="product-modal" id="productModal" aria-hidden="true">
+  <div class="product-modal__overlay" data-close></div>
+  <div class="product-modal__box" role="dialog" aria-modal="true">
+    <button class="product-modal__close" data-close aria-label="Закрыть">×</button>
+    <div class="product-modal__image">
+      <img src="" alt="" id="productModalImg">
+    </div>
+    <div class="product-modal__content">
+      <h3 class="product-modal__title" id="productModalTitle"></h3>
+      <ul class="product-modal__specs" id="productModalSpecs"></ul>
+      <p class="product-modal__desc" id="productModalDesc"></p>
+      <a href="contacts.html" class="product-modal__cta">Заказать</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
