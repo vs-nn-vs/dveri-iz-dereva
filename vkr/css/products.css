@@ -235,30 +235,6 @@ ul  { list-style: none; }
   height: 100%;
 }
 
-/* Тег (ПРОДУКЦИЯ) */
-.products__tag {
-  position: absolute;
-  top: 64px;
-  left: 64px;
-  display: flex;
-  align-items: center;
-}
-
-.tag__line {
-  width: 40px;
-  height: 1px;
-  background-color: #1E2B1D;
-  margin-right: 12px;
-}
-
-.tag__text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  color: #1E2B1D;
-  text-transform: uppercase;
-}
-
 /* Заголовок */
 .products__title {
   position: absolute;
