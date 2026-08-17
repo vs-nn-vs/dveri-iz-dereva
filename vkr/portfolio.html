@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/portfolio.css" />
   <link rel="stylesheet" href="css/adaptive.css">
+  <link rel="stylesheet" href="css/modal.css">
   
 </head>
 <body>  
@@ -44,9 +45,13 @@
              </div>
 
          <div class="portfolio__grid">
-             <div class="portfolio-item">
-                 <img src="img/portfolio-door.jpg" alt="Входная дверь" class="portfolio-item__img">
-                 <span class="portfolio-item__desc">Входная дверь · Дуб · 2024</span>
+             <div class="portfolio-item"
+               data-full-title="Входная дверь, проект 2024"
+               data-material="Дуб"
+               data-size="Индивидуальный размер"
+               data-description="Реализованный проект: входная дверь из массива дуба. Изготовлена по индивидуальному техническому заданию заказчика.">
+               <img src="img/portfolio-door.jpg" alt="Входная дверь" class="portfolio-item__img">
+               <span class="portfolio-item__desc">Входная дверь · Дуб · 2024</span>
              </div>
 
              <div class="portfolio-item">
@@ -206,6 +211,21 @@
    <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
  </div>
  <div class="mobile-menu__overlay" id="mobileOverlay"></div>
- <script src="js/common.js"></script>
+ <div class="product-modal" id="productModal" aria-hidden="true">
+  <div class="product-modal__overlay" data-close></div>
+  <div class="product-modal__box" role="dialog" aria-modal="true">
+    <button class="product-modal__close" data-close aria-label="Закрыть">×</button>
+    <div class="product-modal__image">
+      <img src="" alt="" id="productModalImg">
+    </div>
+    <div class="product-modal__content">
+      <h3 class="product-modal__title" id="productModalTitle"></h3>
+      <ul class="product-modal__specs" id="productModalSpecs"></ul>
+      <p class="product-modal__desc" id="productModalDesc"></p>
+    </div>
+  </div>
+</div>
+  <script src="js/common.js"></script>
+  <script src="js/product-modal.js"></script>
 </body>
 </html>
