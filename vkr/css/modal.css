@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════
+   modal.css — Модальное окно карточки товара
+════════════════════════════════════════════════ */
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.product-modal.is-open {
+  display: flex;
+}
+
+.product-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 20, 0.72);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+.product-modal__box {
+  position: relative;
+  z-index: 2;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 960px;
+  max-height: 88vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: modalBoxIn 0.35s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes modalBoxIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.product-modal__image {
+  position: relative;
+  background: #1E2B1D;
+  min-height: 360px;
+}
+
+.product-modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-modal__content {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-modal__title {
+  margin: 0 0 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: #1E2B1D;
+}
+
+.product-modal__specs {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  border-top: 1px solid rgba(30, 43, 29, 0.1);
+}
+
+.product-modal__specs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(30, 43, 29, 0.1);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #1E2B1D;
+}
+
+.product-modal__specs li span {
+  color: rgba(30, 43, 29, 0.5);
+}
+
+.product-modal__desc {
+  margin: 0 0 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(30, 43, 29, 0.8);
+}
+
+.product-modal__cta {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 32px;
+  background: #1E2B1D;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.product-modal__cta:hover {
+  opacity: 0.85;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  color: #1E2B1D;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-modal__close:hover {
+  background: #FFFFFF;
+}
+
+/* ── Адаптив ── */
+@media (max-width: 768px) {
+  .product-modal__box {
+    grid-template-columns: 1fr;
+    max-height: 92vh;
+  }
+
+  .product-modal__image {
+    min-height: 240px;
+  }
+
+  .product-modal__content {
+    padding: 32px 24px;
+  }
+
+  .product-modal__title {
+    font-size: 22px;
+  }
+}
