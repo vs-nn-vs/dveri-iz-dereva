@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const parts = value.split('|');
         const mainValue = parts[0];
         const note = parts[1];
-        
+
         li.innerHTML = `
-        <span>${label}</span>
-        <span class="product-modal__specs-value">
-          <b>${mainValue}</b>
-          ${note ? `<small>${note}</small>` : ''}
-        </span>
-       `;
-      specsEl.appendChild(li);
+          <span>${label}</span>
+          <span class="product-modal__specs-value">
+            <b>${mainValue}</b>
+            ${note ? `<small>${note}</small>` : ''}
+          </span>
+        `;
+        specsEl.appendChild(li);
       }
     });
 
