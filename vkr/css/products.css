@@ -217,7 +217,6 @@ ul  { list-style: none; }
 }
 /* Базовые настройки секции */
 .products {
-  max-width: 1440px;
   width: 100%;
   /*min-height: 900px; /* Изменено с height на min-height для гибкости */
   background-color: #E8EDE6;
