@@ -19,8 +19,7 @@
 .product-modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(20, 24, 20, 0.72);
-  backdrop-filter: blur(4px);
+  background: rgba(30, 43, 29, 0.72);
   opacity: 0;
   animation: modalFadeIn 0.3s ease forwards;
 }
@@ -28,7 +27,7 @@
 .product-modal__box {
   position: relative;
   z-index: 2;
-  background:  var(--color-white);
+  background: var(--color-white);
   width: 100%;
   max-width: 960px;
   max-height: 88vh;
@@ -54,7 +53,7 @@
 
 .product-modal__image {
   position: relative;
-  background: #1E2B1D;
+  background: var(--color-dark);
   min-height: 360px;
 }
 
@@ -95,7 +94,6 @@
   border-bottom: 1px solid var(--color-mid);
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--color-text);
 }
 
 .product-modal__specs li > span:first-child {
@@ -123,7 +121,7 @@
 }
 
 .product-modal__desc {
-  margin: 15px 0 32px;
+  margin: 20px 0 32px;
   font-family: var(--font-body);
   font-weight: 300;
   font-size: 15px;
@@ -139,15 +137,14 @@
   background: var(--color-dark);
   color: var(--color-white);
   text-decoration: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .product-modal__cta:hover {
-  opacity: 0.85;
   background: var(--color-accent);
 }
 
@@ -169,7 +166,7 @@
 }
 
 .product-modal__close:hover {
-  background: #FFFFFF;
+  background: var(--color-white);
 }
 
 /* ── Адаптив ── */
