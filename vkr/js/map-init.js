@@ -1,13 +1,13 @@
 ymaps.ready(init);
 function init(){
     var myMap = new ymaps.Map("map", {
-        center: [56.517063,85.012453], // Координаты Томска
+        center: [56.493442, 84.946418], // Координаты Томска
         zoom: 16,
         controls: ['zoomControl', 'fullscreenControl']
     });
 
-    var myPlacemark = new ymaps.Placemark([56.517063,85.012453], {
-        hintContent: 'ПСК Стройкаркас',
+    var myPlacemark = new ymaps.Placemark([56.493442, 84.946418], {
+        hintContent: 'Двери из дерева',
         balloonContent: 'Собственное производство дверей и лестниц'
     }, {
         preset: 'islands#darkGreenDotIcon'
