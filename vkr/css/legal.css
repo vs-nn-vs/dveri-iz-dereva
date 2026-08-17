@@ -59,7 +59,7 @@ body {
 /* ── Секция политики ── */
 .legal {
   padding: 120px var(--side-pad) 100px;
-  background: var(--color-white);
+  background: var(--color-beige);
 }
 
 .legal__container {
