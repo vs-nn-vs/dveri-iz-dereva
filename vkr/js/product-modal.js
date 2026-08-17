@@ -28,8 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
     fields.forEach(([label, value]) => {
       if (value) {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${label}</span><b>${value}</b>`;
-        specsEl.appendChild(li);
+        const parts = value.split('|');
+        const mainValue = parts[0];
+        const note = parts[1];
+        
+        li.innerHTML = `
+        <span>${label}</span>
+        <span class="product-modal__specs-value">
+          <b>${mainValue}</b>
+          ${note ? `<small>${note}</small>` : ''}
+        </span>
+       `;
+      specsEl.appendChild(li);
       }
     });
 
