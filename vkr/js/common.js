@@ -159,6 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
       }
+
+      // Проверка согласия на обработку персональных данных
+      const consentInput = document.getElementById('consent');
+      if (consentInput && !consentInput.checked) {
+        alert('Пожалуйста, подтвердите согласие на обработку персональных данных.');
+        consentInput.focus();
+        return;
+      }
  
       // Блокируем кнопку на время отправки
       btn.innerText = 'ОТПРАВКА...';
