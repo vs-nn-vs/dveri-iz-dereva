@@ -30,31 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
     img.alt = thumb.alt;
 
     titleEl.textContent = card.dataset.fullTitle || thumb.alt || '';
-    descEl.textContent = card.dataset.description || '';
-
-    specsEl.innerHTML = '';
+    if (descEl) descEl.textContent = card.dataset.description || '';
+    if (specsEl) specsEl.innerHTML = '';
+    
     const fields = [
       ['Материал', card.dataset.material],
       ['Размер', card.dataset.size],
       ['Цена', card.dataset.price]
     ];
-    fields.forEach(([label, value]) => {
-      if (value) {
-        const li = document.createElement('li');
-        const parts = value.split('|');
-        const mainValue = parts[0];
-        const note = parts[1];
-
-        li.innerHTML = `
-          <span>${label}</span>
-          <span class="product-modal__specs-value">
-            <b>${mainValue}</b>
-            ${note ? `<small>${note}</small>` : ''}
-          </span>
-        `;
-        specsEl.appendChild(li);
-      }
-    });
+    if (specsEl) {
+       fields.forEach(([label, value]) => {
+           if (value) {
+              const li = document.createElement('li');
+              const parts = value.split('|');
+              const mainValue = parts[0];
+              const note = parts[1];
+              li.innerHTML = `
+                  <span>${label}</span>
+                  <span class="product-modal__specs-value">
+                      <b>${mainValue}</b>
+                      ${note ? `<small>${note}</small>` : ''}
+                  </span>
+              `;
+              specsEl.appendChild(li);
+          }
+      });
+     }
 
     // Скрываем стрелки, если пролистывать нечего
     const hideNav = visibleCards.length <= 1;
