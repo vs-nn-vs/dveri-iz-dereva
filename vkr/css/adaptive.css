@@ -517,8 +517,9 @@
   }
 
   .hero__photo-placeholder {
-    background-position: center bottom !important;
-  }
+    background-image: url('img/hero-bg-mobile.jpg') !important;
+    background-position: center !important;
+}
 
   .hero__card {
     display: none !important;
