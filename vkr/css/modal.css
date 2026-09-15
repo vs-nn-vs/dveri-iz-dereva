@@ -1,7 +1,31 @@
 /* ═══════════════════════════════════════════════
    modal.css — Модальное окно карточки товара
 ════════════════════════════════════════════════ */
+/* ── Вариант модалки только с фото (Портфолио) ── */
+.product-modal--photo-only .product-modal__box {
+    display: block;
+    background: transparent;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: none;
+    border-radius: 0;
+}
 
+.product-modal--photo-only .product-modal__image {
+    min-height: 0;
+    background: transparent;
+}
+
+.product-modal--photo-only .product-modal__image img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
 .product-modal {
   position: fixed;
   inset: 0;
