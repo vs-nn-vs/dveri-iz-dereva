@@ -208,20 +208,17 @@
    <a href="contacts.html" class="mobile-menu__cta">Заказать</a>
  </div>
  <div class="mobile-menu__overlay" id="mobileOverlay"></div>
- <div class="product-modal" id="productModal" aria-hidden="true">
+ <div class="product-modal product-modal--photo-only" id="productModal" aria-hidden="true">
   <div class="product-modal__overlay" data-close></div>
   <button class="product-modal__nav product-modal__nav--prev" data-prev aria-label="Предыдущее изделие">‹</button>
   <button class="product-modal__nav product-modal__nav--next" data-next aria-label="Следующее изделие">›</button>
   <div class="product-modal__box" role="dialog" aria-modal="true">
-    <button class="product-modal__close" data-close aria-label="Закрыть">×</button>
-    <div class="product-modal__image">
-      <img src="" alt="" id="productModalImg">
+        <button class="product-modal__close" data-close aria-label="Закрыть">×</button>
+        <div class="product-modal__image">
+            <img src="" alt="" id="productModalImg">
+        </div>
     </div>
-    <div class="product-modal__content">
-      <h3 class="product-modal__title" id="productModalTitle"></h3>
-    </div>
-  </div>
-</div>
+ </div>
   <script src="js/common.js"></script>
   <script src="js/product-modal.js"></script>
 </body>
