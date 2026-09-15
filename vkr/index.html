@@ -77,7 +77,11 @@
 
       <!-- Photo: top/right offset 64px | rect 656×772px -->
       <div class="hero__photo">
-        <img src="img/hero-bg.jpg" alt="Деревянная лестница и дверь из массива" class="hero__img">
+           <picture>
+               <source media="(max-width: 768px)" srcset="img/hero-bg-mobile.jpg">
+               <img src="img/hero-bg.jpg" alt="Деревянная лестница и дверь из массива" class="hero__img">
+           </picture>
+      </div>
 
         <!-- Card overlay: left from photo 48px, bottom 58px | rect 160×90px #F6F8F5
              Number "12" top 17px, left 30px — Raleway Light 38px, #1E2B1D
