@@ -515,7 +515,7 @@
     height: 260px !important;
     order: 1;
   }
-
+   
   .hero__photo-placeholder {
     background-image: url('img/hero-bg-mobile.jpg') !important;
     background-position: center !important;
