@@ -516,6 +516,10 @@
     order: 1;
   }
 
+  .hero__photo-placeholder {
+    background-position: center 30% !important;
+  }
+
   .hero__card {
     position: absolute !important;
     left: 16px !important;
