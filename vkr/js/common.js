@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error("Ошибка: Библиотека EmailJS не загружена. Проверьте подключение в HTML.");
   }
+   /* ── Динамический год в копирайте ────────────── */
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+  }
+ 
   /* ── Burger menu (мобильная навигация) ───────── */
   const header = document.querySelector('.header__inner');
   const mobileMenu = document.getElementById('mobileMenu');
