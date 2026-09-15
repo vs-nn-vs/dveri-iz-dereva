@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img.src = thumb.src;
     img.alt = thumb.alt;
 
-    titleEl.textContent = card.dataset.fullTitle || thumb.alt || '';
+    if (titleEl) titleEl.textContent = card.dataset.fullTitle || thumb.alt || '';
     if (descEl) descEl.textContent = card.dataset.description || '';
     if (specsEl) specsEl.innerHTML = '';
     
