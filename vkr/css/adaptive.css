@@ -517,7 +517,7 @@
   }
 
   .hero__photo-placeholder {
-    background-position: center top !important;
+    background-position: center bottom !important;
   }
 
   .hero__card {
