@@ -615,7 +615,11 @@
     width: 100% !important;
     height: 320px !important;
   }
-
+   
+  .product-card__info {
+    left: 20px !important;
+    bottom: 24px !important;
+  }
   .products__tag {
     position: static !important;
     top: auto !important;
